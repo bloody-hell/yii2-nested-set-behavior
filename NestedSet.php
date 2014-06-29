@@ -70,7 +70,6 @@ class NestedSet extends Behavior
 	public function events()
 	{
 		return [
-			ActiveRecord::EVENT_AFTER_FIND => 'afterFind',
 			ActiveRecord::EVENT_BEFORE_DELETE => 'beforeDelete',
 			ActiveRecord::EVENT_BEFORE_INSERT => 'beforeInsert',
 			ActiveRecord::EVENT_BEFORE_UPDATE => 'beforeUpdate',
