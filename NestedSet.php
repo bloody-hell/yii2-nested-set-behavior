@@ -619,15 +619,6 @@ class NestedSet extends Behavior
 	}
 
 	/**
-	 * Handle 'afterFind' event of the owner.
-	 * @param Event $event event parameter.
-	 */
-	public function afterFind($event)
-	{
-		self::$_cached[get_class($this->owner)][$this->_id = self::$_c++] = $this->owner;
-	}
-
-	/**
 	 * Handle 'beforeInsert' event of the owner.
 	 * @param Event $event event parameter.
 	 * @throws Exception.
