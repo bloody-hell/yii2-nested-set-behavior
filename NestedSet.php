@@ -1217,11 +1217,9 @@ class NestedSet extends Behavior
 		}
 	}
 
-	/**
-	 * Destructor.
-	 */
-	public function __destruct()
-	{
-		unset(self::$_cached[get_class($this->owner)][$this->_id]);
-	}
+    public function detach()
+    {
+        unset(self::$_cached[get_class($this->owner)][$this->_id]);
+        parent::detach();
+    }
 }
